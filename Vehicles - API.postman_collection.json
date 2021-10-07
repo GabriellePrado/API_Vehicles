@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "ab075570-2f35-4766-8c3b-00d69f20435d",
+		"name": "Vehicles - API",
+		"description": "\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:11704/api/Vehicle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:11704/api/Vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11704",
+					"path": [
+						"api",
+						"Vehicle"
+					]
+				},
+				"description": "List all vehicles"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:11704/api/Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:11704/api/Vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11704",
+					"path": [
+						"api",
+						"Vehicle"
+					]
+				},
+				"description": "Create new vehicle"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:11704/api/Vehicle/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:11704/api/Vehicle/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11704",
+					"path": [
+						"api",
+						"Vehicle",
+						"{id}"
+					]
+				},
+				"description": "Update"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:11704/api/Vehicle/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:11704/api/Vehicle/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11704",
+					"path": [
+						"api",
+						"Vehicle",
+						"{id}"
+					]
+				},
+				"description": "Delete an vehicle"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:11704/api/Vehicle/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:11704/api/Vehicle/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "11704",
+					"path": [
+						"api",
+						"Vehicle",
+						"{id}"
+					]
+				},
+				"description": "Search vehicle by ID"
+			},
+			"response": []
+		}
+	]
+}
