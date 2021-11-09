@@ -9,6 +9,8 @@ using Teste_API_Vehicles.Data;
 using Teste_API_Vehicles.Data.Configuration;
 using Microsoft.Extensions.Options;
 using Teste_API_Vehicles.Data.Repositories;
+using Teste_API_Vehicles.Business.Service.IVehicleService;
+using API_Vehicles.Business.Service;
 
 namespace Teste_API_Vehicles
 {
@@ -26,6 +28,7 @@ namespace Teste_API_Vehicles
             services.Configure<DatabaseConfig>(Configuration.GetSection(nameof(DatabaseConfig)));
             services.AddSingleton<IDatabaseConfig>(s => s.GetRequiredService<IOptions<DatabaseConfig>>().Value);
             services.AddSingleton<IVehicleRepository, VehicleRepository>();
+            services.AddSingleton<IVehicleService, VehicleService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

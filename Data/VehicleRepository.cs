@@ -23,26 +23,60 @@ namespace Teste_API_Vehicles.Data
 
         public void Create(Vehicle vehicle)
         {
-            _vehicles.InsertOne(vehicle);
+            try
+            {
+                _vehicles.InsertOne(vehicle);
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Erro ao criar um novo veiculo " + e.Message);
+            }
         }
         public void Update( Vehicle vehicleUpdate)
         {
-           
-            _vehicles.ReplaceOne(vehicle => vehicle.Id == vehicleUpdate.Id, vehicleUpdate);
+            try
+            {
+                _vehicles.ReplaceOne(vehicle => vehicle.Id == vehicleUpdate.Id, vehicleUpdate);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro atualizar " + e.Message);
+            }
         }
         public void Delete(int id)
         {
-            _vehicles.DeleteOne(vehicle => vehicle.Id == id);
+            try
+            {
+                _vehicles.DeleteOne(vehicle => vehicle.Id == id);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao deletar " + e.Message);
+            }
         }
 
         public IEnumerable<Vehicle> ListVehicle()
         {
-            return _vehicles.Find(vehicle => true).ToList();
+            try
+            {
+                return _vehicles.Find(vehicle => true).ToList(); 
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Não encontrado " + e.Message);
+            }
         }
 
         public Vehicle SearchVehicle(int id)
         {
-            return _vehicles.Find(vehicle => vehicle.Id == id).FirstOrDefault();
+            try
+            {
+                return _vehicles.Find(vehicle => vehicle.Id == id).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro: " + e.Message);
+            }
         }
 
     }
